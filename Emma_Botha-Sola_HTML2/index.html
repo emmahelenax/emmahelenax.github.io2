@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elf's Personal Assistant - Job Application</title>
+   
+   <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; }
+        header, footer { background-color: cadetblue; padding: 10px; }
+        nav a { margin: 0 0px; }
+        section { margin-top: 20px; }
+        .form-section {background-color: azure; padding: 15px; border: 1px solid ; }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>House of Elves</h1>
+        <nav>
+            <a href="#application">Application Form</a>
+            <a href="#quote">Quote</a>
+            <a href="#media">Elf's House Media</a>
+        </nav>
+    </header>
+  
+    <main>
+        <section id="application" class="form-section">
+
+            <article>
+                <h2>Personal Assistant to Elf - Job Application</h2>
+
+                <!--Job Application Form starts here-->
+
+                <form action="/submit" method="POST" autocomplete="on">
+                    <label>Full Name:
+                        <input type="text" name="fullname" placeholder="Anne Assistant" required minlength="3" maxlength="50">
+                    </label>
+                    <br></br>
+
+                    <label>Email:
+                        <input type="text" name="email" placeholder="your.email@email.com" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                    </label>
+                    <br></br>
+
+                    <label>Password:
+                        <input type="password" name="password" required>
+                    </label>
+                    <br></br>
+
+                    <label>Years of Experience:
+                        <input type="number" name="experience" min="0" max="10">
+                    </label>
+                    <br></br>
+
+                    <label>Expected Salary Range:
+                        <input type="range" name="salary" min="800" max="3000" step="100">
+                    </label>
+                    <br></br>
+
+                    <label>Job Preferences:</label><br>
+                    <input type="checkbox" name="preference" value="remote"> Remote Work<br>
+                    <input type="checkbox" name="preference" value="onsite"> On Site<br>
+                    <input type="checkbox" name="preference" value="parttime"> Part-Time<br></br>
+
+                    <label>Job Type</label><br>
+                    <input type="radio" name="jobtype" value="elfsassistant"> Elf's Assistant<br>
+                    <input type="radio" name="jobtype" value="intern"> Elf Internship<br></br>
+
+                    <label>Department:
+                        <select name="department">
+                            <option value="reindeer">Reindeer Department</option>
+                            <option value="presents">Present Department</option>
+                            <option value="candy">Candy Department</option>
+                            <option value="security">Security Department</option>
+                        </select>
+                    </label><br></br>
+
+                    <label>Town Preference:
+                        <input list="towns" name="towns">
+                        <datalist id="towns">
+                                <option value="Rovaniemi">
+                                <option value="Äkäslompolo">
+                                <option value="Kittilä">
+                                <option value="Ii">
+                        </datalist>
+                    </label><br></br>
+
+                    <label>Motivation Letter:<br>
+                        <textarea name="coverletter" rows="5" cols="40" placeholder="Why Should We Choose You?"></textarea>
+                    </label><br></br>
+                
+                    <label>Referral Code (disabled):
+                        <input type="text" value="ELVESRULE" disabled>
+                    </label><br></br>
+
+                    <label>Application ID (readonly):
+                        <input type="text" value="CHRISTMAS101" readonly>
+                    </label><br></br>
+
+                    <input type="submit" value="Send Application" aria-label="Submit Job Application">
+
+                </form>
+
+                <!--Job Application Form ends here-->
+
+            </article>
+
+        </section>
+
+        <aside>
+                <blockquote id="quote">
+                    "Ho ho ho" - Santa Claus
+                </blockquote>
+        </aside>
+
+        <section id="media">
+            <article>
+                <h2>House of Elves Media</h2>
+
+                <!--Photos of Elves-->
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1511881721716-686204776e2b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880"
+                    alt="House of Elves picture"
+                    width="500">
+                    <figcaption>Official Photo of House of Elves</figcaption>
+                </figure><br>
+
+                <embed src="https://images.unsplash.com/photo-1607941561567-bf187df5d5e3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=686" type="image/jpg" width="300" height="500">
+            </article>
+        </section>
+
+    </main>
+    <footer>
+            <p>All rights reserved.</p>
+    </footer>
+</body>
+</html>
